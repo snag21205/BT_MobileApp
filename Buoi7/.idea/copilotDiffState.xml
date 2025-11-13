@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/example/buoi7/data/dao/ExpenseDao.kt">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/app/src/main/java/com/example/buoi7/data/dao/ExpenseDao.kt" />
+              <option name="originalContent" value="package com.example.buoi7.data.dao&#10;&#10;//import androidx.room.Dao&#10;import androidx.lifecycle.LiveData&#10;import androidx.room.*&#10;import com.example.buoi7.data.model.ExpenseModel&#10;&#10;@Dao&#10;interface ExpenseDao {&#10;    //suspend cho thao tác db chỉ thực hiện 1 lần&#10;    @Insert (onConflict = OnConflictStrategy.REPLACE)&#10;    suspend fun insertExpense(expense: ExpenseModel)&#10;&#10;    // Dùng fun trả về LiveData hoặc Flow cho các truy vấn&#10;    // mà bạn muốn UI tự động cập nhật khi dữ liệu thay đổi.&#10;    @Query (&quot;SELECT * FROM ExpenseModel ORDER BY id DESC&quot;)&#10;    fun getAllExpenses(): LiveData&lt;List&lt;ExpenseModel&gt;&gt;&#10;&#10;    @Query (&quot;SELECT SUM(amount) FROM ExpenseModel&quot;)&#10;    fun getTotalExpense(): LiveData&lt;Double&gt;&#10;&#10;    @Query(&quot;SELECT * FROM ExpenseModel WHERE id = :expenseId&quot;)&#10;    suspend fun getExpenseById(expenseId: Int): ExpenseModel&#10;&#10;    @Delete&#10;    suspend fun deleteExpense(expense: ExpenseModel)&#10;&#10;    @Update&#10;    suspend fun updateExpense(expense: ExpenseModel)&#10;}&#10;" />
+              <option name="updatedContent" value="package com.example.buoi7.data.dao&#10;&#10;//import androidx.room.Dao&#10;import androidx.lifecycle.LiveData&#10;import androidx.room.*&#10;import com.example.buoi7.data.model.ExpenseModel&#10;&#10;@Dao&#10;interface ExpenseDao {&#10;    //suspend cho thao tác db chỉ thực hiện 1 lần&#10;    @Insert (onConflict = OnConflictStrategy.REPLACE)&#10;    suspend fun insertExpense(expense: ExpenseModel)&#10;&#10;    // Dùng fun trả về LiveData hoặc Flow cho các truy vấn&#10;    // mà bạn muốn UI tự động cập nhật khi dữ liệu thay đổi.&#10;    @Query (&quot;SELECT * FROM ExpenseModel ORDER BY id DESC&quot;)&#10;    fun getAllExpenses(): LiveData&lt;List&lt;ExpenseModel&gt;&gt;&#10;&#10;    @Query (&quot;SELECT SUM(amount) FROM ExpenseModel&quot;)&#10;    fun getTotalExpense(): LiveData&lt;Double&gt;&#10;&#10;    @Query(&quot;SELECT * FROM ExpenseModel WHERE id = :expenseId&quot;)&#10;    suspend fun getExpenseById(expenseId: Int): ExpenseModel&#10;&#10;    @Delete&#10;    suspend fun deleteExpense(expense: ExpenseModel)&#10;&#10;    @Update&#10;    suspend fun updateExpense(expense: ExpenseModel)&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/example/buoi7/data/model/ExpenseModel.kt">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/app/src/main/java/com/example/buoi7/data/model/ExpenseModel.kt" />
+              <option name="originalContent" value="package com.example.buoi7.data.model&#10;&#10;import androidx.room.Entity&#10;import androidx.room.PrimaryKey&#10;&#10;@Entity(tableName = &quot;ExpenseModel&quot;)&#10;data class ExpenseModel(&#10;    @PrimaryKey(autoGenerate = true)&#10;    val id: Int = 0,&#10;    val title: String,&#10;    val amount: Double,&#10;    val category: String,&#10;    val date: String,&#10;)" />
+              <option name="updatedContent" value="package com.example.buoi7.data.model&#10;&#10;import androidx.room.Entity&#10;import androidx.room.PrimaryKey&#10;&#10;@Entity(tableName = &quot;ExpenseModel&quot;)&#10;data class ExpenseModel(&#10;    @PrimaryKey(autoGenerate = true)&#10;    val id: Int = 0,&#10;    val title: String,&#10;    val amount: Double,&#10;    val category: String,&#10;    val date: String,&#10;)" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
