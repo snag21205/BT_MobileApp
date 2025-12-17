@@ -1,16 +1,16 @@
 {
   "project_info": {
-    "project_number": "991840455214",
-    "firebase_url": "https://buoi-9-29f67-default-rtdb.asia-southeast1.firebasedatabase.app",
-    "project_id": "buoi-9-29f67",
-    "storage_bucket": "buoi-9-29f67.firebasestorage.app"
+    "project_number": "942532697050",
+    "firebase_url": "https://buoi9cn-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "buoi9cn",
+    "storage_bucket": "buoi9cn.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:991840455214:android:44f91f736f8cf8e99b2dbf",
+        "mobilesdk_app_id": "1:942532697050:android:91a4fea1fc29a12077fee3",
         "android_client_info": {
-          "package_name": "com.example.buoi_9"
+          "package_name": "com.example.buoi9_cn"
         }
       },
       "oauth_client": [],
